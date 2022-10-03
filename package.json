@@ -2,15 +2,20 @@
   "name": "riot-api-project",
   "version": "1.0.0",
   "description": "RIOT API PROJECT",
-  "main": "js/index.js",
   "scripts": {
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
-    "compile:sass": "node-sass sass/main.scss css/style.comp.css"
+    "compile:sass": "node-sass sass/main.scss css/style.comp.css",
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "author": "Aleksander Jonczyk",
-  "license": "ISC",
   "dependencies": {
     "axios": "^0.27.2",
     "node-sass": "^7.0.3"
+  },
+  "devDependencies": {
+    "buffer": "^6.0.3",
+    "parcel": "^2.7.0",
+    "process": "^0.11.10"
   }
 }
