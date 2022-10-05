@@ -6,7 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Riot API</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/8a900ecc34.js"
+      crossorigin="anonymous"
+    ></script>
     <script type="module" defer src="src/index.js"></script>
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <h1 class="header__logo">
+        <span class="header__logo-main">League</span> Stats
+      </h1>
+    </header>
+    <section class="search">
+      <div class="search__block">
+        <input type="text" class="search__input" />
+        <button class="search__button">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+      <p class="search__annotation">
+        *Search only works for EUNE server players.
+      </p>
+    </section>
+    <section>
+      <div>
+        <div>summonericon</div>
+        <h2>Summoner name</h2>
+        <h3>Lvl: <span>0</span></h3>
+      </div>
+      <div>
+        <h4>Solo/duo rank</h4>
+        <div>summonersoloqrank</div>
+        <div>
+          <p>Wins: <span>0</span></p>
+          <p>Loses: <span>0</span></p>
+          <p>Winrate: <span>0</span>%</p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p>&copy; 2022. League Stats.</p>
+    </footer>
+  </body>
 </html>

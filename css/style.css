@@ -4,17 +4,26 @@
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
-}
+  box-sizing: inherit; }
 
 html {
   font-size: 62.5%;
   overflow-x: hidden;
-  scroll-behavior: smooth;
-}
+  scroll-behavior: smooth; }
 
 body {
   font-family: "Lato", sans-serif;
   overflow-x: hidden;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
+
+.header {
+  background: linear-gradient(225deg, #091428 0%, #0a1428 100%); }
+  .header__logo {
+    text-align: center;
+    font-family: "Bebas Neue", cursive;
+    font-size: 8rem;
+    padding: 6rem;
+    color: #cccbc7; }
+    .header__logo-main {
+      color: #a77b2f;
+      letter-spacing: 0.1rem; }
