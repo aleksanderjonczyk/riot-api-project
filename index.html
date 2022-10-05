@@ -19,8 +19,12 @@
       </h1>
     </header>
     <section class="search">
-      <div class="search__block">
-        <input type="text" class="search__input" />
+      <div class="search__form">
+        <input
+          type="text"
+          class="search__input"
+          placeholder="Summoner name..."
+        />
         <button class="search__button">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
@@ -31,17 +35,17 @@
     </section>
     <section>
       <div>
-        <div>summonericon</div>
-        <h2>Summoner name</h2>
-        <h3>Lvl: <span>0</span></h3>
+        <div class="summoner-icon">summonericon</div>
+        <h2 class="summoner-name">Summoner name</h2>
+        <h3>Level <span class="summoner-level">0</span></h3>
       </div>
       <div>
         <h4>Solo/duo rank</h4>
-        <div>summonersoloqrank</div>
+        <div class="summoner-rank">summonersoloqrank</div>
         <div>
-          <p>Wins: <span>0</span></p>
-          <p>Loses: <span>0</span></p>
-          <p>Winrate: <span>0</span>%</p>
+          <p>Wins: <span class="summoner-rank-wins">0</span></p>
+          <p>Loses: <span class="summoner-rank-losses">0</span></p>
+          <p>Winrate: <span class="summoner-rank-winrate">0</span>%</p>
         </div>
       </div>
     </section>

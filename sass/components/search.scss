@@ -1,0 +1,31 @@
+.search {
+  background-color: $color-blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 10vh;
+  color: $color-black;
+
+  &__input {
+    padding: 1rem 3rem;
+    border: none;
+    background-color: $color-white;
+  }
+
+  &__button {
+    background-color: $color-white;
+    margin-left: -2px;
+    padding: 1rem;
+    border: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__annotation {
+    color: $color-gray-light;
+    margin: 0.2rem;
+  }
+}

@@ -17,13 +17,37 @@ body {
   box-sizing: border-box; }
 
 .header {
-  background: linear-gradient(225deg, #091428 0%, #0a1428 100%); }
+  background: linear-gradient(225deg, #091428 0%, #0a1428 100%);
+  border-bottom: 0.2rem solid #a77b2f; }
   .header__logo {
     text-align: center;
     font-family: "Bebas Neue", cursive;
     font-size: 8rem;
-    padding: 6rem;
+    padding: 4rem;
     color: #cccbc7; }
     .header__logo-main {
       color: #a77b2f;
-      letter-spacing: 0.1rem; }
+      letter-spacing: 0.2rem; }
+
+.search {
+  background-color: #005091;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 10vh;
+  color: #010a13; }
+  .search__input {
+    padding: 1rem 3rem;
+    border: none;
+    background-color: #eeeeee; }
+  .search__button {
+    background-color: #eeeeee;
+    margin-left: -2px;
+    padding: 1rem;
+    border: none; }
+    .search__button:hover {
+      cursor: pointer; }
+  .search__annotation {
+    color: #cccbc7;
+    margin: 0.2rem; }

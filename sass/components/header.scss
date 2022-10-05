@@ -5,16 +5,18 @@
     rgba(10, 20, 40, 1) 100%
   );
 
+  border-bottom: 0.2rem solid $color-gold;
+
   &__logo {
     text-align: center;
     font-family: $font1;
     font-size: 8rem;
-    padding: 6rem;
+    padding: 4rem;
     color: $color-gray-light;
 
     &-main {
       color: $color-gold;
-      letter-spacing: 0.1rem;
+      letter-spacing: 0.2rem;
     }
   }
 }
