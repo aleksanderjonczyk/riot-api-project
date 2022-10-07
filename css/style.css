@@ -51,3 +51,23 @@ body {
   .search__annotation {
     color: #cccbc7;
     margin: 0.2rem; }
+
+.summoner {
+  background-color: #cccbc7;
+  color: #010a13;
+  height: 50vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20rem; }
+  .summoner-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .summoner-data__icon {
+      background-repeat: no-repeat;
+      background-size: contain;
+      border: 0.1rem solid #010a13;
+      height: 8rem;
+      width: 8rem; }

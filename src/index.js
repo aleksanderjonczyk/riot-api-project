@@ -2,10 +2,10 @@ import eun1API from "./riotAPI.js";
 import { KEY } from "./API_KEY.js";
 import { SUMMONER_ICONS_LINK } from "./config.js";
 
-const summonerIcon = document.querySelector(".summoner-icon");
-const summonerName = document.querySelector(".summoner-name");
+const summonerIcon = document.querySelector(".summoner-data__icon");
+const summonerName = document.querySelector(".summoner-data__name");
 const summonerLvl = document.querySelector(".summoner-level");
-const summonerRank = document.querySelector(".summoner-rank");
+const summonerRank = document.querySelector(".summoner-ranking__tier");
 const summonerWins = document.querySelector(".summoner-rank-wins");
 const summonerLosses = document.querySelector(".summoner-rank-losses");
 const summonerWinrate = document.querySelector(".summoner-rank-winrate");
@@ -19,6 +19,7 @@ const getSummonerByName = async name => {
     `/summoner/v4/summoners/by-name/${name}?api_key=${KEY}`
   );
   summonerIcon.style.backgroundImage = `url(${SUMMONER_ICONS_LINK}/${data.profileIconId}.png)`;
+  summonerIcon.innerHTML = "";
   summonerName.innerHTML = data.name;
   summonerLvl.innerHTML = data.summonerLevel;
   getSummonersRank(data.id);
