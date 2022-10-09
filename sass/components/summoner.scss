@@ -21,4 +21,25 @@
       width: 8rem;
     }
   }
+
+  &-data-ranking {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__emblem {
+      // background-image: url("../ranked-emblems/Emblem_Gold.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      height: 10rem;
+      width: 10rem;
+    }
+  }
+
+  &-rank {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+  }
 }

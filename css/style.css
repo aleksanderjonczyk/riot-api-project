@@ -71,3 +71,17 @@ body {
       border: 0.1rem solid #010a13;
       height: 8rem;
       width: 8rem; }
+  .summoner-data-ranking {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .summoner-data-ranking__emblem {
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      height: 10rem;
+      width: 10rem; }
+  .summoner-rank {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem; }
