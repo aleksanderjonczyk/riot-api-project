@@ -1,0 +1,17 @@
+footer {
+  background-color: $color-gray;
+  width: 100vw;
+  height: 5vh;
+  position: relative;
+
+  & p {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    letter-spacing: 0.15rem;
+    color: $color-black;
+    font-size: 1.4rem;
+    font-family: $font1;
+  }
+}

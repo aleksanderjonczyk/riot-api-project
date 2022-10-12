@@ -25,7 +25,7 @@
           class="search__input"
           placeholder="Summoner name..."
         />
-        <button class="search__button">
+        <button class="search__button" type="submit">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </div>
@@ -34,21 +34,22 @@
       </p>
     </section>
     <section class="summoner">
+      <h2 class="summoner__header">
+        Enter your summoner name to see your data.
+      </h2>
       <div class="summoner-data">
-        <div class="summoner-data__icon">summonericon</div>
-        <h2 class="summoner-data__name">Summoner name</h2>
-        <h3 class="summoner-data__level">
-          Level <span class="summoner-level">0</span>
-        </h3>
+        <div class="summoner-data__icon"></div>
+        <h3 class="summoner-data__name"></h3>
+        <h4 class="summoner-data__level"></h4>
       </div>
       <div class="summoner-data-ranking">
-        <h4 class="summoner-data-ranking__type">Solo/duo rank</h4>
         <div class="summoner-data-ranking__emblem"></div>
-        <div class="summoner-data-ranking__tier">summonersoloqrank</div>
+        <h6 class="summoner-data-ranking__type"></h6>
+        <div class="summoner-data-ranking__tier"></div>
         <div class="summoner-rank">
-          <p>Wins: <span class="summoner-rank-wins">0</span></p>
-          <p>Loses: <span class="summoner-rank-losses">0</span></p>
-          <p>Winrate: <span class="summoner-rank-winrate">0</span>%</p>
+          <span class="summoner-rank-wins"></span>
+          <span class="summoner-rank-losses"></span>
+          <span class="summoner-rank-winrate"></span>
         </div>
       </div>
     </section>

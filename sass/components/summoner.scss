@@ -1,12 +1,19 @@
 .summoner {
   background-color: $color-gray-light;
   color: $color-black;
-  height: 50vh;
+  height: 60vh;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20rem;
+  position: relative;
+
+  &__header {
+    position: absolute;
+    font-size: 2.5rem;
+    color: $color-gray-dark;
+  }
 
   &-data {
     display: flex;
@@ -16,9 +23,16 @@
     &__icon {
       background-repeat: no-repeat;
       background-size: contain;
-      border: 0.1rem solid $color-black;
-      height: 8rem;
-      width: 8rem;
+      height: 12rem;
+      width: 12rem;
+    }
+
+    &__name {
+      font-size: 2rem;
+    }
+
+    &__level {
+      font-size: 1.5rem;
     }
   }
 
@@ -28,12 +42,21 @@
     align-items: center;
 
     &__emblem {
-      // background-image: url("../ranked-emblems/Emblem_Gold.png");
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
-      height: 10rem;
-      width: 10rem;
+      height: 14rem;
+      width: 14rem;
+    }
+
+    &__type {
+      font-size: 1.3rem;
+      font-weight: normal;
+    }
+
+    &__tier {
+      font-size: 1.5rem;
+      font-weight: bold;
     }
   }
 
@@ -41,5 +64,6 @@
     display: flex;
     flex-direction: row;
     gap: 0.5rem;
+    font-size: 1.2rem;
   }
 }
