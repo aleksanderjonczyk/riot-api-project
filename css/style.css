@@ -96,6 +96,8 @@ body {
     .summoner-data-ranking__tier {
       font-size: 1.5rem;
       font-weight: bold; }
+    .summoner-data-ranking__lp {
+      font-size: 1.4rem; }
   .summoner-rank {
     display: flex;
     flex-direction: row;

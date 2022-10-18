@@ -7,6 +7,7 @@ const summonerIcon = document.querySelector(".summoner-data__icon");
 const summonerName = document.querySelector(".summoner-data__name");
 const summonerLvl = document.querySelector(".summoner-data__level");
 const summonerRank = document.querySelector(".summoner-data-ranking__tier");
+const summonerLP = document.querySelector(".summoner-data-ranking__lp");
 const summonerRankType = document.querySelector(".summoner-data-ranking__type");
 const summonerEmblem = document.querySelector(".summoner-data-ranking__emblem");
 const summonerWins = document.querySelector(".summoner-rank-wins");
@@ -34,10 +35,11 @@ const getSummonersRank = async id => {
     `/league/v4/entries/by-summoner/${id}?api_key=${KEY}`
   );
   if (!data[0]) return;
-  const { queueType, losses, rank, tier, wins } = data[0];
+  const { queueType, losses, rank, tier, wins, leaguePoints } = data[0];
   summonerRankType.innerHTML = queueType;
   summonerEmblem.style.backgroundImage = `url(${rankingEmblem(tier)})`;
   summonerRank.innerHTML = `${tier} ${rank}`;
+  summonerLP.innerHTML = "LP: " + leaguePoints;
   summonerWins.innerHTML = "Wins: " + wins;
   summonerLosses.innerHTML = "Loses: " + losses;
   summonerWinrate.innerHTML = `Winrate: ${Math.round(
