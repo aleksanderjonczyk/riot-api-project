@@ -80,10 +80,15 @@ body {
       font-size: 2rem; }
     .summoner-data__level {
       font-size: 1.5rem; }
+    .summoner-data-rank {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
   .summoner-data-ranking {
     display: flex;
-    flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    flex-direction: row;
+    gap: 5rem; }
     .summoner-data-ranking__emblem {
       background-repeat: no-repeat;
       background-size: contain;
@@ -91,7 +96,7 @@ body {
       height: 14rem;
       width: 14rem; }
     .summoner-data-ranking__type {
-      font-size: 1.3rem;
+      font-size: 2rem;
       font-weight: normal; }
     .summoner-data-ranking__tier {
       font-size: 1.5rem;
