@@ -3,25 +3,26 @@ import { KEY } from "./API_KEY.js"; // Key expires every 24 hours so ask me for 
 import { SUMMONER_ICONS_LINK } from "./config.js";
 import { rankingEmblem } from "./rankingEmblem.js";
 const summonerHeader = document.querySelector(".summoner__header");
-const summonerIcon = document.querySelector(".summoner-data__icon");
-const summonerName = document.querySelector(".summoner-data__name");
-const summonerLvl = document.querySelector(".summoner-data__level");
+const summonerData = document.querySelector(".summoner-data");
 const summonerRanking = document.querySelector(".summoner-data-ranking");
 const searchButton = document.querySelector(".search__button");
 const search = document.querySelector(".search__input");
 
 const getSummonerByName = async name => {
-  const res = await eun1API.get(
-    `/summoner/v4/summoners/by-name/${name}?api_key=${KEY}`
-  );
-  // .catch(() => (summonerHeader.innerHTML = "Summoner does not exist."));
-  if (!res) return;
-  const { data } = res;
+  const { data } = await eun1API
+    .get(`/summoner/v4/summoners/by-name/${name}?api_key=${KEY}`)
+    .catch(() => (summonerHeader.innerHTML = "Summoner does not exist."));
+  if (!data) return;
   summonerHeader.innerHTML = "";
+  summonerData.insertAdjacentHTML(
+    "afterbegin",
+    `
+    <div class="summoner-data__icon" style="background-image: url(${SUMMONER_ICONS_LINK}/${data.profileIconId}.png)"></div>
+    <h3 class="summoner-data__name">${data.name}</h3>
+    <h4 class="summoner-data__level">Level: ${data.summonerLevel}</h4>
+  `
+  );
   getSummonersRank(data.id);
-  summonerIcon.style.backgroundImage = `url(${SUMMONER_ICONS_LINK}/${data.profileIconId}.png)`;
-  summonerName.innerHTML = data.name;
-  summonerLvl.innerHTML = "Level " + data.summonerLevel;
 };
 
 const getSummonersRank = async id => {
@@ -62,11 +63,9 @@ const getSummonersRank = async id => {
 
 searchButton.addEventListener("click", e => {
   e.preventDefault();
+  summonerData.innerHTML = "";
   summonerRanking.innerHTML = "";
   if (!search.value) return;
   getSummonerByName(search.value);
   search.value = "";
 });
-
-// TODO:
-// Fix error when you search for summoner that doesnt exist or has rank
